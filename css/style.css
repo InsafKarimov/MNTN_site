@@ -20,7 +20,7 @@ body {
     margin-bottom: 140px;
 }
 .container {
-    max-width: 1200px;
+    width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -64,6 +64,10 @@ body {
 .nav__link:hover {
     color: #0B1D26;
 }
+.login {
+    display: flex;
+    align-items: center;
+}
 .login__row {
     display: flex;
     align-items: center;
@@ -77,7 +81,10 @@ body {
     transform: translateY(-3px);
     opacity: 0.8;
 }
-.login__item:first-child {
+.account {
+    display: flex;
+}
+.login__item {
     margin-right: 10px;
 }
 .login__link {
@@ -96,6 +103,79 @@ body {
     display: flex;
     align-items: center;
 }
+.nav__holder {
+    display: block;
+    opacity: 1;
+    position: static;
+    background-color: transparent;
+}
+.nav__item{
+    margin-right: 30px;
+    padding: 0;
+    border-bottom: none;
+}
+.nav__holder--visible {
+    display: none;
+}
+.menu-icon-wrapper {
+    /*   background: red; */
+    width: 30px;
+    height: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    position: relative;
+}
+
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #000000;
+}
+    
+.menu-icon::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #000000;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    
+}
+    
+.menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #000000;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    
+}
+    
+.menu-icon.menu-icon-active {
+    background-color: transparent;
+}
+    
+.menu-icon.menu-icon-active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+    
+.menu-icon.menu-icon-active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+    
+
 
 /* header */
 .header {
@@ -170,9 +250,11 @@ body {
     position: relative;
     column-gap: 40px;
 }
-.post--reverse {
+.post__reverse {
     display: flex;
     flex-direction: row;
+    position: relative;
+    column-gap: 40px;
 }
 .post__img {
     max-width: 450px;
@@ -184,15 +266,20 @@ body {
     top: 0;
     left: 0;
 }
-.number--reversenumber {
+.number__reverse {
     position: absolute;
     max-width: 200px;
     max-height: 200px;
-    right: 65px;
+    right: 0px;
+    top: 0;
 }
 .post__content {
     padding-left: 100px;
     padding-top: 60px;
+}
+.post__content-reverse {
+    padding-top: 60px;
+    padding-right: 100px;
 }
 .post__content-title {
     display: flex;

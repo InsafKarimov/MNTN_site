@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MNTN</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Philosopher&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,18 +20,23 @@
                 <div class="logo"><a href="#" class="logo__link">MNTN</a></div>
                 <div class="nav__holder">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">Equipment</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">About us</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                        <a href="#main"><li class="nav__item"><a href="#main" class="nav__link">Equipment</a></li></a>
+                        <a href="#main"><li class="nav__item"><a href="#main" class="nav__link">About us</a></li></a>
+                        <a href="#main"><li class="nav__item"><a href="#main" class="nav__link">Blog</a></li></a>
                     </ul>      
                 </div>
-                <div class="login">
-                    <div class="login__row">
-                        <a href="#"><img src="./icons/cart.svg" alt="" class="login__img"></a>
-                        <ul class="login__list">
-                            <li class="login__item"><a href="#" class="login__link">Log in</a></li>
-                            <li class="login__item"><a href="#" class="login__link">Sign up</a></li>
-                        </ul>
+                <div class="account">
+                    <div class="login">
+                        <div class="login__row">
+                            <a href="#"><img src="./icons/cart.svg" alt="" class="login__img"></a>
+                            <ul class="login__list">
+                                <li class="login__item"><a href="#" class="login__link">Log in</a></li>
+                                <li class="login__item"><a href="#" class="login__link">Sign up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-icon-wrapper">
+                        <div class="menu-icon"></div>
                     </div>
                 </div>
             </div>
@@ -61,7 +67,9 @@
         <div class="container">
             <div class="posts-wrapper">
                 <div class="post">
-                    <img src="./img/02.jpg" alt="" class="post__img">
+                    <div class="post__img-row">
+                        <img src="./img/02.jpg" alt="" class="post__img">
+                    </div>
                     <img src="./img/01number.png" alt="" class="number">
                     <div class="post__content">
                         <div class="post__content-title">
@@ -78,10 +86,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="post--reverse">
-                    <img src="./img/01.jpg" alt="" class="post__img">
-                    <img src="./img/02number.png" alt="" class="number--reversenumber">
-                    <div class="post__content">
+                <div class="post__reverse">
+                    <div class="post__img-row">
+                        <img src="./img/01.jpg" alt="" class="post__img">
+                    </div>
+                    <img src="./img/02number.png" alt="" class="number__reverse">
+                    <div class="post__content-reverse">
                         <div class="post__content-title">
                             <div class="header__title-row-rectangle"><img src="./img/стрелказолото.png" alt=""></div>
                             <div class="header__title-row-title"><p>Hiking Essentials</p></div>
@@ -98,7 +108,9 @@
                     </div>
                 </div>
                 <div class="post">
-                    <img src="./img/03.jpg" alt="" class="post__img">
+                    <div class="post__img-row">
+                        <img src="./img/03.jpg" alt="" class="post__img">
+                    </div>
                     <img src="./img/03number.png" alt="" class="number">
                     <div class="post__content">
                         <div class="post__content-title">
@@ -152,6 +164,7 @@
         </div>
     </footer>
 
+    <script src="./js/main.js"></script>
     
 </body>
 </html>
